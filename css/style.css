@@ -1,0 +1,461 @@
+/*
+importar fontes da gogle
+*/
+
+:root {
+    --main-color: #00eeff;
+    --text-color: #ffffff;
+    --bg-color-01: #1f242d;
+    --bg-color-02: #323946;
+    --color-00: #0000001a;
+
+    /*Cores extras*/
+
+    --color-01: #999999;
+    --color-02: #009539;
+    --color-03: #7950f2;
+    --color-04: #c00000;
+    --color-05: #232323;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    scroll-behavior: smooth;
+}
+
+html{
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+}
+body{
+    background-color: var(--bg-color-01);
+    color: var(--text-color);
+}
+header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: var(--bg-color-01);
+    width: 100%;
+    padding: 1.1rem;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    z-index: 100;
+}
+.logo{
+    font-size: 1.7rem;
+    color: var(--text-color);
+    font-weight: 600;
+    cursor: pointer;
+}
+.nav-Responsivo  {
+    display:none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    padding: 1rem;
+    background-color: var(--bg-color-01);
+}
+.nav a, .nav-Responsivo a {
+    font-size: 1.2rem;
+    color: var(--text-color);
+    padding: 0.5rem 1rem;
+    transition: 0.4s;
+}
+.nav a:hover, .nav-Responsivo a:hover{
+    color: var(--main-color);
+}
+section{
+    min-height: 100vh;
+    padding: 6rem 6rem 2rem;
+}
+span{
+    color: var(--main-color);
+}
+.Home, .Abaut{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+
+}
+.Home-img img, .abaut-img img{
+    width: 100%;
+}
+.Home_conteiner, .abaou-container{
+    width: 45%;
+}
+.Home_conteiner p, .abaou-container p{
+    margin-top: 1.2rem;
+    text-align: justify;
+}
+.abaou-container h3, .abaou-container h3{
+    font-size: 1,6rem;
+    font-weight: 700;
+}
+.abaou-container h1, .abaou-container h1{
+    font-size: 2.7rem;
+    font-weight: 700;
+    line-height: 1.3;
+}
+.Abaut {
+    background-color: var(--bg-color-02);
+}
+.Home-img  {
+    border-right: solid 0.6rem;
+    border-bottom: solid 0.6rem;
+    border-image: linear-gradient(135deg, transparent 50%, var(--main-color)) 1;
+}
+.abaut-img  {
+    
+    border-left: solid 0.6rem;
+    border-bottom: solid 0.6rem;
+    border-image: linear-gradient(225deg, transparent 50%, var(--main-color)) 1;
+}
+.Serviços h2,
+.Porftolio h2,
+.Contact h2{
+    font-size: 2.2rem;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+.Serviços_conteiner {
+    display: flex;
+    flex-direction: row
+    ;
+    justify-content: space-between;
+}
+.Serviços_conteiner .Serviços-box {
+    padding: 2rem 1rem 2.5rem;
+    border: .5rem solid var(--bg-color-01);
+    border-radius: 2rem;
+    text-align: center;
+    background-color: var(--bg-color-02);
+    transition: 0.5s ease;
+}
+.Serviços-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 25rem;
+    margin: 1rem;
+}
+.Serviços .Serviços-box:hover{
+    border-color: var(--main-color);
+    transform: scale(1.05);
+}
+.Serviços-box i {
+    font-size: 4.3rem;
+    color: var(--main-color);
+}
+.Serviços-box h3 {
+    font-size: 1.5rem;
+}
+.Serviços-box p {
+    margin: 0.5rem;
+    letter-spacing: 0.1rem;
+    /*Color reticencias na frase*/
+    display: -webkit-box;
+    -webkit-line-clamp: 6;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.Abaut p {
+    margin: 0.5rem;
+    letter-spacing: 0.1rem;
+    /*Color reticencias na frase*/
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.Porftolio {
+    background: var(--bg-color-02);
+}
+.Portfolio-container{
+    display: grid;
+    gap: 1rem;
+}
+.Portfolio-box {
+    position: relative;
+    border-radius: 0.6rem;
+    box-shadow: 000.6rem var(--bg-color-01);
+    overflow: hidden;
+    display: flex;
+}
+.Portfolio-box img{
+   width: 100%;
+}
+.Portfolio-box:hover {
+    transform: scale(1.04);
+}
+.Portfolio-layer {
+    position: absolute;
+    bottom: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(transparent, var(--main-color));
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 0 4rem;
+    transform: translateY(28rem);
+    transition: 0.5s ease;
+}
+.Portfolio-box:hover .Portfolio-layer {
+    transform: translateY(0);
+}
+.Portfolio-layer h4{
+    font-size: 1.8rem;
+}
+.Portfolio-layer p{
+    margin: 0.2rem 0 0.5rem;
+}
+.Portfolio-layer a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 3rem;
+    height: 3rem;
+    background: var(--text-color);
+    border-radius: 50%;
+}
+.Portfolio-layer a i {
+    font-size: 1.2rem;
+}
+.Contact .btn {
+   transform: translateX(260px);
+}
+form{
+    max-width: 45rem;
+    margin: 0.6rem auto;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+form .Iput-box {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+form .Iput-box input, form textarea {
+    width: 100%;
+    padding: 1rem;
+    font-size: 1rem;
+    background-color: var(--bg-color-02);
+    color: var(--text-color);
+    border-radius: 0.5rem;
+    margin: 0.4rem 0;
+}
+form textarea {
+    resize: none;
+}
+.Sociais-medias {
+    width: 20.5rem;
+}
+.Sociais-medias a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 2.5rem;
+    height: 2.5rem;
+    background: transparent;
+    border: solid 0.15rem var(--main-color);
+    border-radius: 50%;
+    font-size: 2rem;
+    color: var(--main-color);
+    margin: 1.8rem 0.5rem;
+    transition: 0.5s ease;
+}
+.Sociais-medias a:hover{
+    background-color: var(--main-color);
+    color: var(--bg-color-02);
+}
+footer{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 1.2rem;
+    background-color: var(--bg-color-01);
+}
+/*Estlização dso botões*/
+.btn {
+    display: inline-block;
+    padding: 0.7rem 1.8rem;
+    border-radius: 2rem;
+    background: var(--main-color);
+    color: var(--bg-color-02);
+    font-weight: 600;
+    letter-spacing: 0.1rem;
+    margin-top: 1.2rem;
+}
+.btn:hover {
+    box-shadow: 000.3rem var(--main-color);
+    background: inherit;
+    cursor: pointer;
+    color: var(--main-color);
+}
+/*/Estlização dso botões*/
+/*Menu Hambuerger*/
+.Menu-hamburger{
+    display: none;
+    cursor: pointer;
+}
+.Bar1, .Bar2, .Bar3 {
+    width: 2rem;
+    height: 0.3rem;
+    background-color: var(--text-color);
+    margin: 0.4rem 0;
+    transition: 0.3s ease;
+}
+.Change .Bar1 {
+    transform:  translate(0, 0.65rem) rotate(-45deg);
+}
+.Change .Bar2 {
+    opacity: 0;
+}
+.Change .Bar3 {
+    transform:  translate(0, -0.65rem) rotate(45deg);
+}
+/*Menu Hambuerger*/
+/*Media queries*/
+/*--Telas pequenas (XS): Smartphone--*/
+@media (min-width: 0px){
+    .Menu-hamburger{
+        display: block;
+    }
+    .nav {
+        display: none;
+    }
+    .nav-Responsivo a{
+        display: block;
+        font-size: 1.2rem;
+    }
+    section {
+        padding: 6rem 2.5rem;
+    }
+    .Home, .Abaut{
+        flex-direction: column;
+        gap: 1.2rem;
+    }
+    .Home-img, .abaut-img{
+        width: 80%;
+    }
+    .Home_conteiner, .abaou-container {
+        width: 100%;
+    }
+    .Home_conteiner div {
+        text-align: center;
+    }
+    .Home_conteiner h1, .abaou-container h1{
+        font-size: 2.2rem;
+        font-weight: 700;
+        line-height: 1.3;
+    }
+    .Serviços_conteiner {
+    flex-direction: column;
+    align-items: center;
+    }
+    .Contact .btn {
+        transform: translateX(100px);
+     }
+    .Serviços-box {
+        width: 100%;
+    }
+}
+/*--/Telas pequenas (XS): Smartphone--*/
+/*--Telas pequenas (Sm): Smart (Landscap)--*/
+@media (min-width: 576px) {
+    .Home-img, .abaut-img {
+        width: 65%;
+        max-width: 65%;
+    }
+    .Serviços-box {
+        width: 70%;
+    }
+    .Contact .btn {
+        transform: translateX(140px);
+     }
+}
+/*--/Telas pequenas (Sm): Smart (Landscap)--*/
+/*--Telas medias (MD): Tablet--*/
+@media (min-width: 768px) {
+    .Menu-hamburger{
+        display: none;
+    }
+    .nav {
+        display: block;
+    }
+    .nav-Responsivo, .nav-Responsivo a {
+        display: none;
+    }
+    .Home, .Abaut {
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
+    .Home-img, .abaut-img {
+        max-width: 35%;
+    }
+    .Home_conteiner, .abaou-container {
+        width: 50%;
+    }
+    .Serviços-box {
+        width: 60%;
+        margin-bottom: 2rem;
+    }
+    .Portfolio-container {
+        grid-template-columns: auto auto;
+    }
+    form  .Iput-box input{
+        width: 49%;
+    }
+    .Contact .btn {
+        transform: translateX(240px);
+     }
+     .Portfolio-layer h4{
+        font-size: 1.2rem;
+    }
+    .Portfolio-layer p{
+        margin: 0.1rem 0 0.3rem;
+    }
+}
+/*--/Telas pequenas (Sm): Smart (Landscap)--*/
+/*--Notebook --*/
+@media (min-width: 992px) {
+    .Home-img, .abaut-img{
+        max-width: 35%;
+    }
+    .Serviços_conteiner{
+        flex-direction: row;
+        gap: 1.2rem;
+    }
+}
+/*--/Notebook --*/
+/*--Tela maior (Desk-top) --*/
+@media (min-width: 1200px) {
+    .Home-img, .abaou-container{
+        max-width: 25%;
+    }
+    .Home_conteiner h1 {
+        font-size: 2.7rem;
+    }
+    .Home_conteiner h1 {
+        font-size: 2rem;
+    }
+    .Portfolio-container{
+        grid-template-columns: auto auto auto;
+    }
+}
+/*--/Notebook --*/
