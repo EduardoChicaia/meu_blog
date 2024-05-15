@@ -369,10 +369,17 @@ footer{
     align-items: center;
     }
     .Contact .btn {
-        transform: translateX(30px);
+        transform: translateX(34px);
      }
     .Serviços-box {
         width: 100%;
+    }
+    .Portfolio-layer p {
+        display: -webkit-box;
+        -webkit-line-clamp: 6;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        text-overflow: ellipsis;
     }
  
 }
