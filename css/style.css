@@ -332,7 +332,7 @@ footer{
 /*Menu Hambuerger*/
 /*Media queries*/
 /*--Telas pequenas (XS): Smartphone--*/
-@media (min-width: 0px) and (min-width: 482px){
+@media (min-width: 0px) {
     .Menu-hamburger{
         display: block;
     }
@@ -369,7 +369,7 @@ footer{
     align-items: center;
     }
     .Contact .btn {
-        transform: translateX(100px);
+        transform: translateX(15px);
      }
     .Serviços-box {
         width: 100%;
